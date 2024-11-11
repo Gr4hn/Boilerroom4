@@ -7,10 +7,10 @@ using namespace std;
 
 int main() {
     cout << "Hello, World!" << endl;
-    //Startmeny funktion
+    //Startmeny funktion  
     sleepForSeconds(2);
     //Hejdå meddealnde
     cin.ignore();
     cin.get();
     return 0;
-}
+} 
