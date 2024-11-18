@@ -1,32 +1,56 @@
 #include "Character.h"
 
-Character::Character(int health, int attack, int defense)
+Character::Character(string name, int health, int attack, int defense) : name(name), health(health), attack(attack), defense(defense)
 {
-    this->health = health;
-    this->attack = attack;
-    this->defense = defense;
 }
+
+Character::~Character() {}
+
 void Character::setHealth (int health) 
 {
-    health = 100;
+    this->health = health;
 }
-int Character::getHealth ()
+
+int Character::getHealth() const
 {
     return health;
 }
-void Character::setAttack (int attack) 
+
+void Character::setAttack(int attack) 
 {
-    attack = 10;
+    this->attack = attack;
 }
-int Character::getAttack ()
+
+int Character::getAttack() const
 {
     return attack;
 }
+
 void Character::setDefense (int defense)
 {
-    defense = 5;
+    this->defense = defense;
 }
-int Character::getDefense ()
+
+int Character::getDefense() const
 {
     return defense;
+}
+
+void Character::setName(string name)
+{
+    this->name = name;
+}
+
+string Character::getName() const
+{
+    return name;
+}
+
+int Character::attackCharacter(Character& character)
+{
+    int damage = 0;
+    damage -= attack - character.getDefense();
+    character.setHealth(character.getHealth() - damage);
+
+    return damage;
 }
