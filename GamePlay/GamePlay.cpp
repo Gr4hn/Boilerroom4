@@ -20,6 +20,7 @@ void gamePlay() {
         cin >> choice;
         switch (choice) {
             case 1:
+                choice = 0;
                 cout << "You have chosen the Warrior!" << endl;
                 sleepForSeconds(1);
                 cout << "Your stats are: " << endl;
@@ -29,22 +30,27 @@ void gamePlay() {
                 cout << "Defense: 15" << endl;
                 cout << "Select 1 to confirm or 2 to choose another character." << endl;
                 cin >> choiceOfCharacter;
+                
                 do 
                 {
                     if (choice == 1) {
                         cout << "Nice choice!" << endl;
                         sleepForSeconds(2);
                         characterIsSelected = true;
+                        break;
                 }
                     else if (choice == 2) {
                         characterIsSelected = false;
+                        break;
                 }
                     else {
                         cout << "Invalid choice. Please try again." << endl;
+                        break;
                 }
                 } while (choiceOfCharacter != 1 || choiceOfCharacter != 2);
                 break;
             case 2:
+                choice = 0;
                 cout << "You have chosen the Mage!" << endl;
                 sleepForSeconds(2);
                 cout << "Your stats are: " << endl;
@@ -82,5 +88,10 @@ void gamePlay() {
     }
     } while (characterIsSelected == true);
     
+    clearScreen();
     cout << "Character selected. Starting game..." << endl;
+    sleepForSeconds(2);
+    clearScreen();
+
+    cout << "You are in a forest. You see a path to the left and right." << endl;
 }

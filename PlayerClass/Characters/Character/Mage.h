@@ -11,6 +11,7 @@ class Mage : public Player
 public:
     Mage(string name, int health, int attack, int defense);
     ~Mage();
+    int attackCharacter(Character& character) override;
 };
 
 #endif

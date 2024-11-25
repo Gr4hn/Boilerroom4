@@ -25,6 +25,7 @@ public:
     string getName() const;
 
     virtual int attackCharacter(Character& character);
+    virtual int defend(int damage, int defense, int health);
 };
 
 

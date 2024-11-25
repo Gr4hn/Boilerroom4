@@ -11,6 +11,7 @@ class Warrior : public Player
 public:
     Warrior(string name, int health, int attack, int defense);
     ~Warrior();
+    int attackCharacter(Character& character) override;
 };
 
 #endif
