@@ -2,7 +2,7 @@
 #include "basics/clearScreen.h"
 #include "gamePlay/gamePlay.h"
 #include <iostream>
-
+#include "PlayerClass/Characters/Character/Mage.h"
 
 using namespace std;
 
@@ -40,6 +40,9 @@ void Menu () {
 
 
 int main() {
+    Mage ragnar("Ragnar", 102, 57, 38);
+    cout << ragnar.getName() << endl;
+    
     cout << "Hello, World!" << endl;
     //Startmeny funktion  
     sleepForSeconds(2);

@@ -15,7 +15,7 @@
                 "${workspaceFolder}/PlayerClass/Characters/Character/*.cpp",
                 // Add other source files as needed
                 "-o",
-                "${workspaceFolder}/game.exe"
+                "game.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

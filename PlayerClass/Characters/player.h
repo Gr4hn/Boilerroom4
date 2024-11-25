@@ -5,22 +5,14 @@
 
 using namespace std;
 
-class Player : Character
+class Player : public Character
 {
-    private:
-        int health;
-        int attack;
-        int defense;
-    public:
-        Player(int health, int attack, int defense);
-        void setHealth (int health); 
-        int getHealth (); 
-        void setAttack (int attack); 
-        int getAttack (); 
-        void setDefense (int defense); 
-        int getDefense ();
-        void displayInventory ();
-
+private:
+    // Filips inventory
+public:
+    Player(string name, int health, int attack, int defense);
+    ~Player();
 };
+
 
 #endif

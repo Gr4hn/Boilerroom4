@@ -2,23 +2,15 @@
 #define Mage_H
 #include "../player.h"
 #include <iostream>
+#include "../NPC/Foe.h"
 
 using namespace std;
 
-class Mage : Player
+class Mage : public Player
 {
-    private:
-        int health;
-        int attack;
-        int defense;
-    public:
-        Mage(int health, int attack, int defense);
-        void setHealth (int health); 
-        int getHealth (); 
-        void setAttack (int attack); 
-        int getAttack (); 
-        void setDefense (int defense); 
-        int getDefense ();
+public:
+    Mage(string name, int health, int attack, int defense);
+    ~Mage();
 };
 
 #endif
