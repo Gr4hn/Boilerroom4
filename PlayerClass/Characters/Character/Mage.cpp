@@ -17,3 +17,4 @@ int Mage::attackCharacter(Character& character)
 
     return damage;
 }
+

@@ -1,6 +1,8 @@
 #include "GamePlay.h"
 #include "sleepForSeconds.h"
 #include "clearScreen.h"
+#include "combat.cpp"
+#include "PlayerClass\Characters\Character\Warrior.h"
 
 using namespace std;
 
@@ -37,6 +39,7 @@ void gamePlay() {
                         cout << "Nice choice!" << endl;
                         sleepForSeconds(2);
                         characterIsSelected = true;
+                        Warrior Garatar("Garatar", 125, 10, 15);
                         break;
                 }
                     else if (choice == 2) {
@@ -94,4 +97,6 @@ void gamePlay() {
     clearScreen();
 
     cout << "You are in a forest. You see a path to the left and right." << endl;
+    cout << "You encountered a foe" << endl;
+    combat(Garatar, foe);
 }

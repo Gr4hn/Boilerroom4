@@ -17,3 +17,4 @@ int Warrior::attackCharacter(Character& character)
 
     return damage;
 }
+
