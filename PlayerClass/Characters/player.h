@@ -20,6 +20,8 @@ class Player : Character
         void setDefense (int defense); 
         int getDefense ();
         void displayInventory ();
+        int defend(int damage, int defense, int health);
+
 
 };
 
