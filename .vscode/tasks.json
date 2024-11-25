@@ -10,12 +10,12 @@
                 "-I${workspaceFolder}/Basics", // Add this line to include the Basics folder
                 "main.cpp",
                 "${workspaceFolder}/Basics/*.cpp",
-                "${workspaceFolder}/GamePlay/GamePlay.cpp",
+                "${workspaceFolder}/GamePlay/*.cpp",
                 "${workspaceFolder}/PlayerClass/Characters/*.cpp",
                 "${workspaceFolder}/PlayerClass/Characters/Character/*.cpp",
                 // Add other source files as needed
                 "-o",
-                "${workspaceFolder}/output.exe"
+                "game.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

@@ -1,24 +1,16 @@
-#ifndef Warrior_H
-#define Warrior_H
+#ifndef WARRIOR_H
+#define WARRIOR_H
 #include "../player.h"
 #include <iostream>
+#include "../NPC/Foe.h"
 
 using namespace std;
 
-class Warrior : Player
+class Warrior : public Player
 {
-    private:
-        int health;
-        int attack;
-        int defense;
-    public:
-        Warrior(int health, int attack, int defense);
-        void setHealth (int health); 
-        int getHealth (); 
-        void setAttack (int attack); 
-        int getAttack (); 
-        void setDefense (int defense); 
-        int getDefense ();
+public:
+    Warrior(string name, int health, int attack, int defense);
+    ~Warrior();
 };
 
 #endif
